@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Irfan Siddiqui's professional portfolio showcasing AI, machine learning, responsible technology, and lifelong learning.">
+<title>Irfan Siddiqui | AI & Machine Learning Portfolio</title>
+<style>
+:root{--bg:#07111f;--panel:#0e1d30;--panel2:#122640;--ink:#edf5ff;--muted:#a8bad0;--cyan:#54d7e8;--blue:#6d8cff;--line:rgba(160,195,230,.18);--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#142e51 0,transparent 38%),var(--bg);color:var(--ink);font:16px/1.65 Inter,Segoe UI,Arial,sans-serif}
+a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(var(--max),92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:rgba(7,17,31,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:20px}.brand{font-weight:800;letter-spacing:.04em}.brand span{color:var(--cyan)}nav{display:flex;gap:22px;flex-wrap:wrap}nav a{font-size:.9rem;color:var(--muted)}
+.hero{padding:88px 0 70px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}.eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:800}
+h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.04;letter-spacing:-.045em;margin:14px 0 20px}.gradient{background:linear-gradient(90deg,var(--cyan),#9baaff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:1.15rem;color:var(--muted);max-width:680px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:11px 18px;border-radius:9px;font-weight:700;border:1px solid var(--cyan)}.btn.primary{background:var(--cyan);color:#061321}.btn.secondary{color:var(--ink);border-color:var(--line)}
+.visual{min-height:320px;display:grid;place-items:center;position:relative}.orb{width:min(330px,75vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#72e8f4,#3458a8 42%,#172b53 68%,#0a1729 72%);box-shadow:0 0 90px rgba(84,215,232,.22);position:relative}.orb:before,.orb:after{content:"";position:absolute;inset:9%;border:1px solid rgba(125,225,245,.45);border-radius:50%;transform:rotateX(68deg) rotateZ(25deg)}.orb:after{transform:rotateX(68deg) rotateZ(-45deg)}.node{position:absolute;width:13px;height:13px;border-radius:50%;background:var(--cyan);box-shadow:0 0 20px var(--cyan)}.n1{top:12%;left:22%}.n2{right:8%;top:48%}.n3{bottom:15%;left:45%}
+section{padding:66px 0;border-top:1px solid var(--line)}.section-head{margin-bottom:28px}.section-head h2{font-size:2rem;margin:4px 0}.section-head p{color:var(--muted);max-width:760px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.card{grid-column:span 6;background:linear-gradient(145deg,rgba(18,38,64,.95),rgba(10,25,43,.95));border:1px solid var(--line);border-radius:16px;padding:24px}.card.third{grid-column:span 4}.card.full{grid-column:1/-1}.card h3{margin:0 0 8px;font-size:1.18rem}.card p{color:var(--muted);margin:0}.tag{display:inline-block;color:var(--cyan);font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.value{font-size:1.35rem;line-height:1.5;color:#dceaff}.pillrow{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.pill{border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--muted);font-size:.82rem}
+.timeline{position:relative;margin:28px 0 0;padding-left:28px}.timeline:before{content:"";position:absolute;left:7px;top:5px;bottom:8px;width:2px;background:linear-gradient(var(--cyan),var(--blue))}.event{position:relative;padding:0 0 23px 18px}.event:before{content:"";position:absolute;left:-26px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 5px rgba(84,215,232,.12)}.year{color:var(--cyan);font-weight:800;font-size:.9rem}.event h4{margin:2px 0 4px}.event p{margin:0;color:var(--muted)}
+.artifact-visual{border:1px solid var(--line);border-radius:14px;padding:16px;background:#09182a;margin:18px 0}.era-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.era{padding:12px 10px;background:#102944;border-radius:10px;min-height:108px}.era b{display:block;color:var(--cyan);font-size:1.1rem}.era span{font-size:.78rem;color:var(--muted)}
+.steps{counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}.step{background:#0a192a;border:1px solid var(--line);padding:14px;border-radius:12px}.step:before{counter-increment:step;content:"0" counter(step);display:block;color:var(--cyan);font-weight:800;margin-bottom:8px}
+footer{padding:34px 0;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}.small{font-size:.88rem;color:var(--muted)}.notice{border-left:3px solid var(--cyan);padding:12px 16px;background:rgba(84,215,232,.07);border-radius:0 10px 10px 0;color:var(--muted)}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:58px}.visual{min-height:240px}.card,.card.third{grid-column:1/-1}.steps{grid-template-columns:repeat(2,1fr)}nav{gap:11px}.nav{align-items:flex-start;padding:15px 0;flex-direction:column}.era-grid{grid-template-columns:repeat(2,1fr)}}
+@media print{header{position:static}.hero{padding:35px 0}.btn{display:none}body{background:#fff;color:#111}.card{background:#f5f8fb;color:#111}.card p,.section-head p,.event p,.small{color:#333}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#home">IS<span>.</span> PORTFOLIO</a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#value">Value</a><a href="#journey">Learning</a><a href="#artifacts">Artifacts</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></div></header>
+<main>
+<section class="wrap hero" id="home" style="border:0">
+ <div><div class="eyebrow">AI • Machine Learning • Responsible Innovation</div><h1>Learning today.<br><span class="gradient">Building tomorrow.</span></h1>
+ <p class="lead">I’m Irfan Siddiqui, an AI/ML graduate student developing the ability to turn emerging technology into understandable, responsible, and useful solutions. This portfolio documents my learning, projects, and professional growth at Indiana Wesleyan University.</p>
+ <div class="actions"><a class="btn primary" href="#artifacts">Explore my work</a><a class="btn secondary" href="#about">About me</a></div>
+ <p class="small" style="margin-top:18px">Professional learning portfolio • AIML-500 • Indiana Wesleyan University</p></div>
+ <div class="visual" aria-label="Abstract illustration representing connected AI systems"><div class="orb"><i class="node n1"></i><i class="node n2"></i><i class="node n3"></i></div></div>
+</section>
+<section id="about"><div class="wrap"><div class="section-head"><div class="eyebrow">01 / Professional profile</div><h2>About me</h2><p>A developing professional profile grounded in curiosity, practical learning, and responsible use of technology.</p></div>
+<div class="grid"><article class="card"><span class="tag">Professional bio</span><h3>Irfan Siddiqui</h3><p>I am an Indiana Wesleyan University student building knowledge in artificial intelligence and machine learning. Through coursework and hands-on learning, I am exploring how data, algorithms, and intelligent tools can support better decisions and solve practical problems. I value continuous improvement, clear communication, ethical thinking, and collaboration. My goal is to keep developing technical and leadership skills and explain complex technology in ways that are useful to both technical and nontechnical audiences.</p></article>
+<article class="card"><span class="tag">Career direction</span><h3>Where I’m heading</h3><p>I am working toward opportunities where I can contribute to AI/ML-enabled problem solving, data-informed decisions, and responsible technology adoption. As my experience grows, I will add evidence of completed projects, methods, results, and lessons learned rather than overstating skills or outcomes.</p></article></div></div></section>
+<section id="value"><div class="wrap"><div class="section-head"><div class="eyebrow">02 / Personal value proposition</div><h2>What I bring</h2></div><div class="card full"><p class="value">I bring a learner’s mindset, a commitment to responsible innovation, and the ability to connect technical concepts with practical needs. I focus on understanding the problem, evaluating information carefully, communicating clearly, and using AI/ML tools as support for—not a replacement for—human judgment.</p><div class="pillrow"><span class="pill">Continuous learning</span><span class="pill">Critical thinking</span><span class="pill">Responsible AI</span><span class="pill">Problem solving</span><span class="pill">Clear communication</span></div></div></div></section>
+<section id="journey"><div class="wrap"><div class="section-head"><div class="eyebrow">03 / Learning journey</div><h2>Building capability step by step</h2><p>This section will grow as I complete additional coursework and projects.</p></div><div class="timeline">
+<div class="event"><div class="year">FOUNDATIONS</div><h4>Understanding AI and machine learning</h4><p>Explore the development of AI, key concepts, and differences among major learning approaches.</p></div>
+<div class="event"><div class="year">APPLICATION</div><h4>Connecting concepts to practical problems</h4><p>Practice framing questions, evaluating tools, and explaining how AI may support a real-world task.</p></div>
+<div class="event"><div class="year">RESPONSIBILITY</div><h4>Ethics, leadership, and critical evaluation</h4><p>Consider limitations, bias, transparency, privacy, and the role of human oversight.</p></div>
+<div class="event"><div class="year">NEXT</div><h4>Developing a stronger project record</h4><p>Add completed artifacts with tangible evidence, process details, and audience-focused value.</p></div>
+</div></div></section>
+<section id="artifacts"><div class="wrap"><div class="section-head"><div class="eyebrow">04 / Selected coursework</div><h2>Artifacts & projects</h2><p>Each artifact is presented as evidence of learning and includes the information required by the IWU portfolio guidance.</p></div>
+<div class="card full">
+<span class="tag">Artifact 01 • First audience-specific artifact</span><h3>AI and Machine Learning: A Timeline of Development and Impact</h3>
+<p><b>Target audience:</b> Employers, business professionals, educators, and learners who want a clear introduction to how AI developed and why its milestones matter.</p>
+<div class="artifact-visual"><div class="eyebrow" style="margin-bottom:12px">A visual overview of major eras</div><div class="era-grid">
+<div class="era"><b>1950s</b><span>Early foundations of machine intelligence and the Turing Test.</span></div>
+<div class="era"><b>1956</b><span>Dartmouth workshop helps establish artificial intelligence as a field.</span></div>
+<div class="era"><b>1980s</b><span>Expert systems bring rule-based AI into practical settings.</span></div>
+<div class="era"><b>1990s</b><span>Data-driven machine learning advances; Deep Blue defeats Garry Kasparov in 1997.</span></div>
+<div class="era"><b>2010s</b><span>Deep learning breakthroughs expand image, speech, and language applications.</span></div>
+<div class="era"><b>2016</b><span>AlphaGo demonstrates powerful learning-based performance in Go.</span></div>
+<div class="era"><b>2020s</b><span>Large language models and generative AI reach broad public use.</span></div>
+<div class="era"><b>Today</b><span>Growing focus on responsible, reliable, and human-centered AI.</span></div>
+</div><p class="small" style="margin-top:12px">Timeline is an educational overview, not an exhaustive history. Dates and descriptions should be checked against the final course artifact and cited sources before public submission.</p></div>
+<h3>Introduction</h3><p>This artifact presents a concise visual overview of important developments in artificial intelligence and machine learning. It is designed to help a nontechnical audience understand that today’s AI systems emerged through decades of research, experimentation, and changing approaches.</p>
+<h3>Description</h3><p>The timeline connects foundational ideas, early AI research, expert systems, machine learning, deep learning, and generative AI. It emphasizes the progression of the field and encourages viewers to consider both the capabilities and responsibilities associated with newer technologies.</p>
+<h3>Objective</h3><p>To organize key AI/ML milestones into an accessible resource and demonstrate the ability to summarize technical history for a general professional audience.</p>
+<h3>Process</h3><p>Identify major periods and representative milestones; arrange them chronologically; summarize each in plain language; select a visual format; and review the content for clarity, accuracy, and audience relevance. The published course artifact should be attached or linked here as tangible evidence.</p>
+<h3>Tools and technologies</h3><p>Course learning materials, research and note-taking tools, a visual design or presentation tool, and this web portfolio format. Add the exact tools used to create the original course submission.</p>
+<h3>Value proposition</h3><p><b>Unique value:</b> Demonstrates my ability to organize complex information and communicate technical developments clearly.<br><b>Relevance:</b> Helps employers, colleagues, and learners understand the context behind current AI/ML tools and supports informed conversations about technology adoption.</p>
+<h3>Evidence / course deliverable</h3><p class="notice">Replace this note with your original Workshop 1 timeline image, PDF, presentation, or a link to the completed assignment. IWU requires a tangible deliverable; this webpage description alone is not sufficient evidence.</p>
+<h3>References</h3><p class="small">Add the sources actually used in your original timeline assignment in the citation style required by your instructor. Do not list sources that you did not consult.</p>
+</div>
+<div class="grid" style="margin-top:18px">
+<article class="card third"><span class="tag">Artifact 02 • Planned</span><h3>AI Lab: Prompt Design & Evaluation</h3><p>Planned evidence: original prompts, three chat outputs, comparison criteria, and documented findings. Publish after the experiment is completed.</p></article>
+<article class="card third"><span class="tag">Artifact 03 • Planned</span><h3>Professional Assessment & Growth</h3><p>Planned evidence: an audience-appropriate development plan and a summary of learning goals. Keep private self-assessment details out of public view.</p></article>
+<article class="card third"><span class="tag">Artifact 04 • Planned</span><h3>Machine Learning vs. Deep Learning</h3><p>Planned evidence: completed case study, comparison, visual, and explanation of the selected use case.</p></article>
+<article class="card third"><span class="tag">Artifact 05 • Planned</span><h3>AI/ML Leadership & Change</h3><p>Planned evidence: a completed leadership or change-management activity with reflection on responsible adoption.</p></article>
+<article class="card third"><span class="tag">Future work</span><h3>Additional projects</h3><p>New artifacts will be added as coursework is completed and reviewed for accuracy, privacy, and audience value.</p></article>
+</div></div></section>
+<section id="skills"><div class="wrap"><div class="section-head"><div class="eyebrow">05 / Professional capabilities</div><h2>Skills in development</h2><p>These are learning areas, not claims of expert-level proficiency. The portfolio will be updated as I gain and demonstrate experience.</p></div><div class="grid">
+<div class="card third"><h3>AI & ML foundations</h3><p>Core concepts, model categories, AI history, and practical applications.</p></div>
+<div class="card third"><h3>Analytical thinking</h3><p>Problem framing, evaluating evidence, comparing approaches, and identifying limitations.</p></div>
+<div class="card third"><h3>Communication</h3><p>Explaining technical ideas in plain language and tailoring information to an audience.</p></div>
+<div class="card third"><h3>Responsible technology</h3><p>Awareness of fairness, privacy, transparency, and human oversight.</p></div>
+<div class="card third"><h3>Adaptability</h3><p>Learning new tools, responding to feedback, and revising work.</p></div>
+<div class="card third"><h3>Leadership mindset</h3><p>Considering how people, processes, and technology interact during change.</p></div>
+</div></div></section>
+<section id="contact"><div class="wrap"><div class="section-head"><div class="eyebrow">06 / Connect</div><h2>Let’s learn and build responsibly</h2><p>I welcome constructive feedback, learning opportunities, and conversations about AI, machine learning, and responsible technology.</p></div><div class="card full"><h3>Irfan Siddiqui</h3><p>Indiana Wesleyan University • AIML-500</p><p class="small">Add a professional email address or LinkedIn profile here only if you want that information publicly visible.</p></div></div></section>
+</main>
+<footer><div class="wrap">© 2026 Irfan Siddiqui • Professional Learning Portfolio <span style="float:right"><a href="#home">Back to top ↑</a></span><p class="small">Coursework portfolio. Project descriptions distinguish completed work from planned artifacts. No employer, certification, or project outcome is claimed unless supported by evidence.</p></div></footer>
+</body></html>
